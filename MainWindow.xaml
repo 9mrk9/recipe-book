@@ -1,0 +1,18 @@
+﻿<Window x:Class="recipe_book.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:recipe_book"
+        mc:Ignorable="d"
+        Title="Recipe Book" Height="720" Width="1080" FontSize="20" WindowStartupLocation="CenterScreen">
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+            <Button Content="Add" Click="AddRecipe" Width="100" Margin="10,10,10,0" Padding="0,5"/>
+            <Button Content="Edit" Click="EditRecipe" Width="100" Margin="10,10,10,0" Padding="0,5"/>
+            <Button Content="Delete" Click="DeleteRecipe" Width="100" Margin="10,10,10,0" Padding="0,5"/>
+            <Button Content="View" Click="ViewRecipe" Width="100" Margin="10,10,10,0" Padding="0,5"/>
+        </StackPanel>
+        <ListBox x:Name="RecipeList" DisplayMemberPath="Title" Margin="10" Padding="2" FontSize="24"/>
+    </DockPanel>
+</Window>

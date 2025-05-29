@@ -1,0 +1,20 @@
+﻿<Window x:Class="recipe_book.RecipeDetailsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:recipe_book"
+        mc:Ignorable="d"
+        Title="Recipe" Height="720" Width="1080" WindowStartupLocation="CenterScreen" FontSize="20">
+    <ScrollViewer Padding="20,10">
+        <StackPanel>
+            <TextBlock x:Name="TitleBlock" FontSize="32" FontWeight="Bold" Margin="0,0,0,10"/>
+            
+            <TextBlock Text="Ingredients:" FontWeight="Bold"/>
+            <TextBlock x:Name="IngredientsBlock" TextWrapping="Wrap" Margin="0,0,0,10"/>
+            
+            <TextBlock Text="Instructions:" FontWeight="Bold"/>
+            <TextBlock x:Name="InstructionsBlock" TextWrapping="Wrap"/>
+        </StackPanel>
+    </ScrollViewer>
+</Window>
