@@ -7,12 +7,15 @@
         mc:Ignorable="d"
         Title="Recipe Book" Height="720" Width="1080" FontSize="20" WindowStartupLocation="CenterScreen">
     <DockPanel>
-        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
-            <Button Content="Add" Click="AddRecipe" Width="100" Margin="10,10,10,0" Padding="0,5"/>
-            <Button Content="Edit" Click="EditRecipe" Width="100" Margin="10,10,10,0" Padding="0,5"/>
-            <Button Content="Delete" Click="DeleteRecipe" Width="100" Margin="10,10,10,0" Padding="0,5"/>
-            <Button Content="View" Click="ViewRecipe" Width="100" Margin="10,10,10,0" Padding="0,5"/>
+        <StackPanel Orientation="Vertical" DockPanel.Dock="Top">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+                <Button Content="Add" Click="AddRecipe" Width="100" Margin="10,10,10,0" Padding="0,5"/>
+                <Button Content="Edit" Click="EditRecipe" Width="100" Margin="10,10,10,0" Padding="0,5"/>
+                <Button Content="Delete" Click="DeleteRecipe" Width="100" Margin="10,10,10,0" Padding="0,5"/>
+                <Button Content="View" Click="ViewRecipe" Width="100" Margin="10,10,10,0" Padding="0,5"/>
+            </StackPanel>
+            <TextBlock Text="Your Recipes" FontWeight="Bold" FontSize="28" Margin="10,5" />
         </StackPanel>
-        <ListBox x:Name="RecipeList" DisplayMemberPath="Title" Margin="10" Padding="2" FontSize="24"/>
+        <ListBox x:Name="RecipeList" DisplayMemberPath="Title" Margin="10" Padding="2" FontSize="24" MouseDoubleClick="ItemDoubleClick" />
     </DockPanel>
 </Window>

@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Input;
 
 namespace recipe_book
 {
@@ -64,7 +65,7 @@ namespace recipe_book
       ctx.SaveChanges();
       LoadRecipes();
     }
-    private void ViewRecipe(object sender, RoutedEventArgs e)
+    private void OpenRecipe()
     {
       var recipe = GetSelectedRecipe();
       if (recipe == null)
@@ -75,6 +76,15 @@ namespace recipe_book
 
       var viewer = new RecipeDetailsWindow(recipe.Id);
       viewer.ShowDialog();
+    }
+    private void ViewRecipe(object sender, RoutedEventArgs e)
+    {
+      OpenRecipe();
+    }
+
+    private void ItemDoubleClick(object sender, MouseButtonEventArgs e)
+    {
+      OpenRecipe();
     }
   }
 }
